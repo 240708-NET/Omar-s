@@ -21,7 +21,25 @@ public class Program{
 	//Console.WriteLine("Welcome to Revature: {0}" , username );
 
 	Console.WriteLine($"Welcome to Revature: {username}");
-  }
+  
+	bool runChoice = true;
+
+if(runChoice == true)
+{
+  Console.WriteLine("runChoice is true");
+}
+else if(runChoice == false)
+{
+  Console.WriteLine("runChoice is false");
+}
+else{
+Console.WriteLine("nothing");
+}
+
+	
+
+
+}
 
 
 }
