@@ -12,10 +12,12 @@ class Program
 			String ComputerMove;
 			Random rand = new Random();
 			string[] moves = { "Rock", "Paper", "scissors" };
-
-			
+				
+				 do
+        			{
 
 				Console.WriteLine("Enter Your Move (Rock, Paper, Scissors): ");
+				
 				PlayerMove = Console.ReadLine();
 
 				if (PlayerMove != "Rock" && PlayerMove != "Paper" && PlayerMove != "Scissors");
@@ -44,9 +46,12 @@ class Program
 
 				else
 				{
-					Console.WriteLine(" Oops Computer Win !");
+					Console.WriteLine("Oops Computer Win !");
 				}
+				  Console.WriteLine("Do you want to play again? (yes/no): ");
+        			} while (Console.ReadLine().ToLower() == "yes");
 
+        			Console.WriteLine("Thanks for playing!");
 			
 		}
 	}
