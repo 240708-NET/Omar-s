@@ -144,7 +144,7 @@ public class ToDoList
         if (taskToComplete != null)
         {
             taskToComplete.MarkComplete();
-            Console.WriteLine("\nTask marked as complete. \u1F7E2");
+            Console.WriteLine("\nTask marked as complete. \n ");
         }
         else
         {
@@ -224,7 +224,7 @@ class Program
             }
             else if (input == "5")
             {
-                Console.WriteLine("Exiting Task Minder :(");
+                Console.WriteLine("Exiting Task Minder....");
                 isRunning = false;
             }
             else
