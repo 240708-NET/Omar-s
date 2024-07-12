@@ -57,8 +57,10 @@ public class ToDoList
     // To add tasks
     public void AddTask(string description)
     {
+        int newId = tasks.Count + 1; 
         Task newTask = new Task(nextId, description);
         tasks.Add(newTask);
+        RenumberTasks();
         nextId++;
         Console.WriteLine("\nTask added successfully.\n");
         ViewTasks();
@@ -71,6 +73,7 @@ public class ToDoList
         if (taskToRemove != null)
         {
             tasks.Remove(taskToRemove);
+            RenumberTasks();
                for (int i = 0; i < tasks.Count; i++)
         {
             tasks[i].Id = i + 1;
@@ -84,6 +87,15 @@ public class ToDoList
         ViewTasks();
     }
 
+   // Method to renumber tasks sequentially
+    private void RenumberTasks()
+    {
+        for (int i = 0; i < tasks.Count; i++)
+        {
+            tasks[i].Id = i + 1;
+        }
+    }
+
     // Method to display all tasks
     public void ViewTasks()
     {
@@ -93,9 +105,19 @@ public class ToDoList
         }
         else
         {
-            foreach (Task task in tasks)
+             foreach (Task task in tasks)
             {
-                Console.WriteLine(task);
+                if (task.IsCompleted)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine(task);
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine(task);
+                }
+                Console.ResetColor();
             }
         }
     }
@@ -107,12 +129,98 @@ public class ToDoList
         if (taskToComplete != null)
         {
             taskToComplete.MarkComplete();
-            Console.WriteLine("\nTask marked as complete.\n");
+            Console.WriteLine("\nTask marked as complete. \u1F7E2");
         }
         else
         {
             Console.WriteLine("\nTask not found.\n");
         }
         ViewTasks();
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        ToDoList toDoList = new ToDoList();
+        bool isRunning = true;
+
+        while (isRunning)
+        {
+            Console.WriteLine("****** Welcome To Task Minder ******\n");
+            Console.WriteLine("1. Let's add a Task!");
+            Console.WriteLine("2. Want to Remove a Task?");
+            Console.WriteLine("3. To-Do List? Let's see it!");
+            Console.WriteLine("4. Task Complete? High-five!");
+            Console.WriteLine("5. Exit - Are you sure?");
+            Console.Write("Choose your adventure (1-5): ");
+
+            string input = Console.ReadLine();
+            Console.Clear();
+
+            if (input == "1")
+            {
+                Console.Write("Enter Task Description: ");
+                string description = Console.ReadLine();
+                toDoList.AddTask(description);
+                Console.WriteLine("\nPress any key to return to the main menu...");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (input == "2")
+            {
+                toDoList.ViewTasks();
+                Console.Write("Enter Task Id to Remove: ");
+                if (int.TryParse(Console.ReadLine(), out int removeid))
+                {
+                    toDoList.RemoveTask(removeid);
+                }
+                else
+                {
+                    Console.Write("Invalid Id.");
+                }
+                Console.WriteLine("\nPress any key to return to the main menu...");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (input == "3")
+            {
+                toDoList.ViewTasks();
+                Console.WriteLine("\nPress any key to return to the main menu...");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (input == "4")
+            {
+                toDoList.ViewTasks();
+                Console.Write("Enter Task Id to Mark as complete: ");
+                if (int.TryParse(Console.ReadLine(), out int completed))
+                {
+                    toDoList.MarkTaskComplete(completed);
+                }
+                else
+                {
+                    Console.Write("Invalid Id.");
+                }
+                Console.WriteLine("\nPress any key to return to the main menu...");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (input == "5")
+            {
+                Console.WriteLine("Exiting Task Minder :(");
+                isRunning = false;
+            }
+            else
+            {
+                Console.WriteLine("Invalid number. Please choose an option from (1-5).");
+                Console.WriteLine("\nPress any key to return to the main menu...");
+                Console.ReadKey();
+                Console.Clear();
+            }
+        }
+
+        Console.WriteLine("Thank you for using TaskMinder!");
     }
 }
