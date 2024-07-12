@@ -1,5 +1,8 @@
-﻿// Task_Minder
+﻿
+// Task Minder
+
 /*
+
 -AddTask:
  Adds a new task to the list.
  * 
@@ -11,6 +14,15 @@
  * 
 -MarkTaskComplete:
 Marks a task as complete by ID.
+
+
+Task Minder menu offers the following options:
+
+- Add a Task: Prompts the user to enter a task description and adds it to the list.
+- Remove a Task: Displays all tasks and prompts the user to enter the ID of the task to remove.
+- View Tasks: Displays all tasks with their current status.
+- Mark a Task as Complete: Displays all tasks and prompts the user to enter the ID of the task to mark as complete.
+
  */
 
 public class Task
@@ -40,6 +52,9 @@ public class Task
         return $"{Id}. {Description} - {(IsCompleted ? "Completed" : "Pending")}";
     }
 }
+
+
+
 
 public class ToDoList
 {
