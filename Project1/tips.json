@@ -1,0 +1,17 @@
+[
+  {
+    "Date": "2024-12-12T00:00:00",
+    "Amount": 50.0,
+    "Shift": "morning"
+  },
+  {
+    "Date": "2024-05-12T00:00:00",
+    "Amount": 100.0,
+    "Shift": "evining"
+  },
+  {
+    "Date": "2024-12-12T00:00:00",
+    "Amount": 40.0,
+    "Shift": "morning"
+  }
+]
