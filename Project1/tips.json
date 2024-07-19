@@ -1,17 +1,47 @@
 [
   {
-    "Date": "2024-12-12T00:00:00",
-    "Amount": 50.0,
+    "Date": "2024-01-01T00:00:00",
+    "Amount": 12.0,
     "Shift": "morning"
   },
   {
-    "Date": "2024-05-12T00:00:00",
+    "Date": "2024-02-02T00:00:00",
     "Amount": 100.0,
-    "Shift": "evining"
+    "Shift": "afternoon"
   },
   {
-    "Date": "2024-12-12T00:00:00",
-    "Amount": 40.0,
+    "Date": "2024-03-03T00:00:00",
+    "Amount": 55.0,
+    "Shift": "afternoon"
+  },
+  {
+    "Date": "2024-04-27T00:00:00",
+    "Amount": 150.0,
+    "Shift": "evening"
+  },
+  {
+    "Date": "2024-05-24T00:00:00",
+    "Amount": 75.0,
+    "Shift": "morning"
+  },
+  {
+    "Date": "2024-06-12T00:00:00",
+    "Amount": 96.0,
+    "Shift": "afternoon"
+  },
+  {
+    "Date": "2024-07-30T00:00:00",
+    "Amount": 85.0,
+    "Shift": "morning"
+  },
+  {
+    "Date": "2024-08-29T00:00:00",
+    "Amount": 55.0,
+    "Shift": "afternoon"
+  },
+  {
+    "Date": "2024-01-01T00:00:00",
+    "Amount": 100.0,
     "Shift": "morning"
   }
 ]

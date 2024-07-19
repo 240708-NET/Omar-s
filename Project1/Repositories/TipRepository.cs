@@ -26,6 +26,10 @@ namespace TipTracker.Repositories
                 }
             }
         }
+         public IEnumerable<Tip> GetAllTips()
+        {
+            return tips;
+        }
 
         public void SaveChanges()
         {

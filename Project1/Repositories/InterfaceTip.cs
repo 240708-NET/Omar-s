@@ -7,6 +7,7 @@ namespace TipTracker.Repositories
     {
         void AddTip(Tip tip);
         IEnumerable<Tip> GetTips(DateTime startDate, DateTime endDate);
+         IEnumerable<Tip> GetAllTips();
         void SaveChanges();
         void LoadTips();
     }
