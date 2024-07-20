@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
 using TipTracker.Models;
 using TipTracker.Repositories;
 
@@ -12,7 +10,6 @@ namespace TipTracker
         static void Main(string[] args)
         {
             ITipRepository tipRepository = new TipRepository();
-            tipRepository.LoadTips();
 
             while (true)
             {
