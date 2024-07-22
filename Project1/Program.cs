@@ -14,7 +14,8 @@ namespace TipTracker
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine("1. Add Tip");
+                Console.WriteLine("Tip Tracker Menu:");
+                Console.WriteLine("1. Add Tip");        
                 Console.WriteLine("2. View Tips by Date Range");
                 Console.WriteLine("3. View Tips by Exact Date");
                 Console.WriteLine("4. View Statistics");
@@ -45,7 +46,7 @@ namespace TipTracker
                     {
                         Console.Write("Shift (morning/afternoon/evening): ");
                         shift = Console.ReadLine();
-                        if (shift == "morning" || shift == "afternoon" || shift == "evening")
+                        if (shift == "morning" || shift == "morn" ||  shift == "afternoon"|| shift == "eve" || shift == "evening"|| shift == "aft")
                         {
                             break;
                         }
