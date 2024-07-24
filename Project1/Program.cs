@@ -144,6 +144,12 @@ namespace TipTracker
             return new DateTime(year, month, day);
         }
 
+
+        private static DateTime GetStartOfWeek(DateTime dt)
+        {
+            var diff = (7 + (dt.DayOfWeek - DayOfWeek.Monday)) % 7;
+            return dt.AddDays(-1 * diff).Date;
+        }
         private static void ShowStatistics(ITipRepository tipRepository)
         {
             var tips = tipRepository.GetAllTips();
@@ -179,14 +185,14 @@ namespace TipTracker
                     Console.ReadKey();
                 }
                 else if (choice == "2")
-                {
-                    var weeklyAverage = tips.GroupBy(t => new { Year = t.Date.Year, Week = CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(t.Date, CalendarWeekRule.FirstDay, DayOfWeek.Monday) })
-                                            .Select(g => new { Week = g.Key, Average = g.Average(t => t.Amount) });
+               {
+                    var weeklyAverage = tips.GroupBy(t => GetStartOfWeek(t.Date))
+                                            .Select(g => new { WeekStart = g.Key, Average = g.Average(t => t.Amount) });
 
                     Console.WriteLine("Weekly Averages:");
                     foreach (var avg in weeklyAverage)
                     {
-                        Console.WriteLine($"Year {avg.Week.Year}, Week {avg.Week.Week}: ${avg.Average:F2}");
+                        Console.WriteLine($"Date:{avg.WeekStart.ToShortDateString()} ${avg.Average:F2}");
                     }
                     Console.WriteLine("Press any key to return to the statistics menu.");
                     Console.ReadKey();
