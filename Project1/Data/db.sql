@@ -1,2 +1,4 @@
 USE TipTrackerDb;
 SELECT * FROM Tips;
+--DELETE FROM Tips WHERE Id IN (81);
+--DBCC CHECKIDENT ('Tips', RESEED, 60);

@@ -9,7 +9,10 @@ namespace TipTracker.Data
 
          protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=localhost,1433;Database=TipTrackerDb;User Id=sa;Password=NotPasswork123!;TrustServerCertificate=true;");
+             string connectionString = File.ReadAllText("connectionString");
+
+            optionsBuilder.UseSqlServer(connectionString);
+            //optionsBuilder.UseSqlServer("Server=localhost,1433;Database=TipTrackerDb;User Id=sa;Password=NotPasswork123!;TrustServerCertificate=true;");
         }
          protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

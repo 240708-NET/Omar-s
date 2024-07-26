@@ -17,14 +17,14 @@ Basic Features:
 -- Calculate daily, weekly, and monthly averages.
 -- Display highest and lowest tip amounts.
 
-# Data Storage: OnGoing 
+# Data Storage: DONE 
 
 -- Save tip data to a file Json for persistence.
 -- Save Added tips from the user to a Database
 
-# -------- # Advanced Features: # --------# 
+# -------- # Future Features: # --------# 
 
-# Categorize Tips: PENDING
+# Categorize Tips: Future
 
 -- Differentiate between cash tips, credit card tips, and tips from other sources.
 

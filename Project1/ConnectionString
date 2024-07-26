@@ -1,0 +1,1 @@
+Server=localhost,1433;Database=TipTrackerDb;User Id=sa;Password=NotPasswork123!;TrustServerCertificate=true;

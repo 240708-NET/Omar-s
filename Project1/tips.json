@@ -1,45 +1,380 @@
 [
   {
     "Id": 1,
-    "Date": "2023-12-12T00:00:00",
-    "Amount": 121.0,
+    "Date": "2024-01-05T00:00:00",
+    "Amount": 100.0,
     "Shift": "morning"
   },
   {
     "Id": 2,
-    "Date": "2023-12-12T00:00:00",
-    "Amount": 12.0,
-    "Shift": "morning"
+    "Date": "2024-01-10T00:00:00",
+    "Amount": 120.0,
+    "Shift": "afternoon"
   },
   {
     "Id": 3,
-    "Date": "2024-12-12T00:00:00",
-    "Amount": 100.0,
-    "Shift": "morning"
+    "Date": "2024-01-15T00:00:00",
+    "Amount": 150.0,
+    "Shift": "evening"
   },
   {
     "Id": 4,
-    "Date": "2020-12-10T00:00:00",
-    "Amount": 100.0,
+    "Date": "2024-01-20T00:00:00",
+    "Amount": 110.0,
     "Shift": "morning"
   },
   {
+    "Id": 5,
+    "Date": "2024-01-25T00:00:00",
+    "Amount": 130.0,
+    "Shift": "afternoon"
+  },
+  {
     "Id": 6,
-    "Date": "2024-12-31T00:00:00",
+    "Date": "2024-02-05T00:00:00",
+    "Amount": 105.0,
+    "Shift": "morning"
+  },
+  {
+    "Id": 7,
+    "Date": "2024-02-10T00:00:00",
     "Amount": 125.0,
     "Shift": "afternoon"
   },
   {
-    "Id": 9,
-    "Date": "2023-12-28T00:00:00",
-    "Amount": 123.0,
+    "Id": 8,
+    "Date": "2024-02-15T00:00:00",
+    "Amount": 155.0,
     "Shift": "evening"
   },
   {
-    "Id": 11,
-    "Date": "2023-11-04T00:00:00",
-    "Amount": 123.0,
+    "Id": 9,
+    "Date": "2024-02-20T00:00:00",
+    "Amount": 115.0,
     "Shift": "morning"
+  },
+  {
+    "Id": 10,
+    "Date": "2024-02-25T00:00:00",
+    "Amount": 135.0,
+    "Shift": "afternoon"
+  },
+  {
+    "Id": 11,
+    "Date": "2024-03-05T00:00:00",
+    "Amount": 110.0,
+    "Shift": "morning"
+  },
+  {
+    "Id": 12,
+    "Date": "2024-03-10T00:00:00",
+    "Amount": 130.0,
+    "Shift": "afternoon"
+  },
+  {
+    "Id": 13,
+    "Date": "2024-03-15T00:00:00",
+    "Amount": 160.0,
+    "Shift": "evening"
+  },
+  {
+    "Id": 14,
+    "Date": "2024-03-20T00:00:00",
+    "Amount": 120.0,
+    "Shift": "morning"
+  },
+  {
+    "Id": 15,
+    "Date": "2024-03-25T00:00:00",
+    "Amount": 140.0,
+    "Shift": "afternoon"
+  },
+  {
+    "Id": 16,
+    "Date": "2024-04-05T00:00:00",
+    "Amount": 115.0,
+    "Shift": "morning"
+  },
+  {
+    "Id": 17,
+    "Date": "2024-04-10T00:00:00",
+    "Amount": 135.0,
+    "Shift": "afternoon"
+  },
+  {
+    "Id": 18,
+    "Date": "2024-04-15T00:00:00",
+    "Amount": 165.0,
+    "Shift": "evening"
+  },
+  {
+    "Id": 19,
+    "Date": "2024-04-20T00:00:00",
+    "Amount": 125.0,
+    "Shift": "morning"
+  },
+  {
+    "Id": 20,
+    "Date": "2024-04-25T00:00:00",
+    "Amount": 145.0,
+    "Shift": "afternoon"
+  },
+  {
+    "Id": 21,
+    "Date": "2024-05-05T00:00:00",
+    "Amount": 120.0,
+    "Shift": "morning"
+  },
+  {
+    "Id": 22,
+    "Date": "2024-05-10T00:00:00",
+    "Amount": 140.0,
+    "Shift": "afternoon"
+  },
+  {
+    "Id": 23,
+    "Date": "2024-05-15T00:00:00",
+    "Amount": 170.0,
+    "Shift": "evening"
+  },
+  {
+    "Id": 24,
+    "Date": "2024-05-20T00:00:00",
+    "Amount": 130.0,
+    "Shift": "morning"
+  },
+  {
+    "Id": 25,
+    "Date": "2024-05-25T00:00:00",
+    "Amount": 150.0,
+    "Shift": "afternoon"
+  },
+  {
+    "Id": 26,
+    "Date": "2024-06-05T00:00:00",
+    "Amount": 125.0,
+    "Shift": "morning"
+  },
+  {
+    "Id": 27,
+    "Date": "2024-06-10T00:00:00",
+    "Amount": 145.0,
+    "Shift": "afternoon"
+  },
+  {
+    "Id": 28,
+    "Date": "2024-06-15T00:00:00",
+    "Amount": 175.0,
+    "Shift": "evening"
+  },
+  {
+    "Id": 29,
+    "Date": "2024-06-20T00:00:00",
+    "Amount": 135.0,
+    "Shift": "morning"
+  },
+  {
+    "Id": 30,
+    "Date": "2024-06-25T00:00:00",
+    "Amount": 155.0,
+    "Shift": "afternoon"
+  },
+  {
+    "Id": 31,
+    "Date": "2024-07-05T00:00:00",
+    "Amount": 130.0,
+    "Shift": "morning"
+  },
+  {
+    "Id": 32,
+    "Date": "2024-07-10T00:00:00",
+    "Amount": 150.0,
+    "Shift": "afternoon"
+  },
+  {
+    "Id": 33,
+    "Date": "2024-07-15T00:00:00",
+    "Amount": 180.0,
+    "Shift": "evening"
+  },
+  {
+    "Id": 34,
+    "Date": "2024-07-20T00:00:00",
+    "Amount": 140.0,
+    "Shift": "morning"
+  },
+  {
+    "Id": 35,
+    "Date": "2024-07-25T00:00:00",
+    "Amount": 160.0,
+    "Shift": "afternoon"
+  },
+  {
+    "Id": 36,
+    "Date": "2024-08-05T00:00:00",
+    "Amount": 135.0,
+    "Shift": "morning"
+  },
+  {
+    "Id": 37,
+    "Date": "2024-08-10T00:00:00",
+    "Amount": 155.0,
+    "Shift": "afternoon"
+  },
+  {
+    "Id": 38,
+    "Date": "2024-08-15T00:00:00",
+    "Amount": 185.0,
+    "Shift": "evening"
+  },
+  {
+    "Id": 39,
+    "Date": "2024-08-20T00:00:00",
+    "Amount": 145.0,
+    "Shift": "morning"
+  },
+  {
+    "Id": 40,
+    "Date": "2024-08-25T00:00:00",
+    "Amount": 165.0,
+    "Shift": "afternoon"
+  },
+  {
+    "Id": 41,
+    "Date": "2024-09-05T00:00:00",
+    "Amount": 140.0,
+    "Shift": "morning"
+  },
+  {
+    "Id": 42,
+    "Date": "2024-09-10T00:00:00",
+    "Amount": 160.0,
+    "Shift": "afternoon"
+  },
+  {
+    "Id": 43,
+    "Date": "2024-09-15T00:00:00",
+    "Amount": 190.0,
+    "Shift": "evening"
+  },
+  {
+    "Id": 44,
+    "Date": "2024-09-20T00:00:00",
+    "Amount": 150.0,
+    "Shift": "morning"
+  },
+  {
+    "Id": 45,
+    "Date": "2024-09-25T00:00:00",
+    "Amount": 170.0,
+    "Shift": "afternoon"
+  },
+  {
+    "Id": 46,
+    "Date": "2024-10-05T00:00:00",
+    "Amount": 145.0,
+    "Shift": "morning"
+  },
+  {
+    "Id": 47,
+    "Date": "2024-10-10T00:00:00",
+    "Amount": 165.0,
+    "Shift": "afternoon"
+  },
+  {
+    "Id": 48,
+    "Date": "2024-10-15T00:00:00",
+    "Amount": 195.0,
+    "Shift": "evening"
+  },
+  {
+    "Id": 49,
+    "Date": "2024-10-20T00:00:00",
+    "Amount": 155.0,
+    "Shift": "morning"
+  },
+  {
+    "Id": 50,
+    "Date": "2024-10-25T00:00:00",
+    "Amount": 175.0,
+    "Shift": "afternoon"
+  },
+  {
+    "Id": 51,
+    "Date": "2024-11-05T00:00:00",
+    "Amount": 150.0,
+    "Shift": "morning"
+  },
+  {
+    "Id": 52,
+    "Date": "2024-11-10T00:00:00",
+    "Amount": 170.0,
+    "Shift": "afternoon"
+  },
+  {
+    "Id": 53,
+    "Date": "2024-11-15T00:00:00",
+    "Amount": 200.0,
+    "Shift": "evening"
+  },
+  {
+    "Id": 54,
+    "Date": "2024-11-20T00:00:00",
+    "Amount": 160.0,
+    "Shift": "morning"
+  },
+  {
+    "Id": 55,
+    "Date": "2024-11-25T00:00:00",
+    "Amount": 180.0,
+    "Shift": "afternoon"
+  },
+  {
+    "Id": 56,
+    "Date": "2024-12-05T00:00:00",
+    "Amount": 155.0,
+    "Shift": "morning"
+  },
+  {
+    "Id": 57,
+    "Date": "2024-12-10T00:00:00",
+    "Amount": 175.0,
+    "Shift": "afternoon"
+  },
+  {
+    "Id": 58,
+    "Date": "2024-12-15T00:00:00",
+    "Amount": 205.0,
+    "Shift": "evening"
+  },
+  {
+    "Id": 59,
+    "Date": "2024-12-20T00:00:00",
+    "Amount": 165.0,
+    "Shift": "morning"
+  },
+  {
+    "Id": 60,
+    "Date": "2024-12-25T00:00:00",
+    "Amount": 185.0,
+    "Shift": "afternoon"
+  },
+  {
+    "Id": 61,
+    "Date": "2024-01-25T00:00:00",
+    "Amount": 15.0,
+    "Shift": "morning"
+  },
+  {
+    "Id": 62,
+    "Date": "2024-05-29T00:00:00",
+    "Amount": 95.0,
+    "Shift": "morning"
+  },
+  {
+    "Id": 63,
+    "Date": "2024-12-12T00:00:00",
+    "Amount": 53.0,
+    "Shift": "afternoon"
   }
- 
 ]
