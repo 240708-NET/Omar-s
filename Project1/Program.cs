@@ -33,6 +33,9 @@ namespace TipTracker
                         ShowStatistics(tipRepository);
                         break;
                     case "5":
+                        DeleteTipsByDate(tipRepository); 
+                        break;
+                    case "6":
                         return;
                     default:
                         Console.WriteLine("Invalid choice. Please select 1, 2, 3, 4, or 5.");
@@ -49,7 +52,8 @@ namespace TipTracker
             Console.WriteLine("2. View Tips by Date Range");
             Console.WriteLine("3. View Tips by Exact Date");
             Console.WriteLine("4. View Statistics");
-            Console.WriteLine("5. Exit");
+            Console.WriteLine("5. Delete Tips by Date");
+            Console.WriteLine("6. Exit");
         }
 
         private static void AddTip(ITipRepository tipRepository)
@@ -207,6 +211,7 @@ namespace TipTracker
                     case "5":
                         ShowLowestTip(tips);
                         break;
+
                     case "6":
                         return;
                     default:
@@ -235,8 +240,8 @@ namespace TipTracker
 
         private static void ShowAverages(IEnumerable<Tip> tips, Func<Tip, DateTime> groupByFunc, string period)
         {
-            
-            // Group tips by the specified grouping function and calculate the average amount for each group
+
+            // Group tips by the specified groups
 
             var averages = tips.GroupBy(groupByFunc)
                                .Select(g => new { Period = g.Key, Average = g.Average(t => t.Amount) });
@@ -258,6 +263,16 @@ namespace TipTracker
         {
             var lowestTip = tips.Min(t => t.Amount);
             Console.WriteLine($"Lowest Tip: ${lowestTip:F2}");
+        }
+
+        private static void DeleteTipsByDate(ITipRepository tipRepository)
+        {
+            Console.Clear();
+            DateTime date = GetValidDate("Enter the date to delete tips:");
+
+            tipRepository.DeleteTipsByDate(date);
+            Console.WriteLine("Tips deleted successfully. Press any key to return to the main menu.");
+            Console.ReadKey();
         }
     }
 }

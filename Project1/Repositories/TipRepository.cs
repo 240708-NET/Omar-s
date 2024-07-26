@@ -109,5 +109,21 @@ namespace TipTracker.Repositories
             File.WriteAllText(filePath, jsonData);
         }
 
+        public void DeleteTipsByDate(DateTime date)
+    {
+        // Remove from the in-memory list
+        tips.RemoveAll(t => t.Date.Date == date.Date);
+
+        // Remove from the database
+        var dbTips = _context.Tips.Where(t => t.Date.Date == date.Date).ToList();
+        if (dbTips.Any())
+        {
+            _context.Tips.RemoveRange(dbTips);
+        }
+
+        // Save changes to the database and synchronize the JSON file
+        SaveChanges();
+    }
+
     }
 }

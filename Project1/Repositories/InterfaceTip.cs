@@ -10,5 +10,6 @@ namespace TipTracker.Repositories
          IEnumerable<Tip> GetAllTips();
         void SaveChanges();
         void LoadTips();
+        void DeleteTipsByDate(DateTime date);
     }
 }
